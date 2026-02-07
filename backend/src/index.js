@@ -3,7 +3,7 @@ import cors from 'cors'
 import fs from 'fs'
 import dotenv from 'dotenv'
 import {removeBackground} from "@imgly/background-removal-node";
-import uploads from './Middleware/upload';
+import uploads from './Middleware/upload.js';
 
 const app = express();
 dotenv.config();
@@ -20,7 +20,7 @@ app.post("/remove-bg",uploads.single("image"), async(req,res)=>{
         res.send(Buffer.from(await result.arrayBuffer()))
         fs.unlinkSync(inputPath);
     } catch (error) {
-        throw new Error
+        console.log("Internal server Error",error)
     }
 })
 
