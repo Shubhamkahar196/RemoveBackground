@@ -1,5 +1,5 @@
 import Upload from "./Upload";
-import { useNavigate } from 'react-router-dom'; // Fixed: Needs curly braces
+import { useNavigate } from 'react-router-dom'; 
 
 const Home = () => {
     const navigate = useNavigate();
@@ -20,16 +20,16 @@ const Home = () => {
                 </div>
 
                 <button 
-                    className="bg-slate-800 border border-slate-700 hover:border-blue-500 transition-all rounded-full font-semibold text-sm py-2 px-6 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-                    onClick={() => navigate("/uploads")} // Fixed: Function call syntax
+                    className="bg-slate-800 border border-slate-700 hover:border-blue-500 transition-all rounded-full font-semibold text-sm py-2 px-6 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] cursor-pointer"
+                    onClick={() => navigate("/")} 
                 >
-                    View History
+                    Uploads
                 </button> 
             </nav>
 
             {/* Hero Section */}
-            <div className="max-w-5xl mx-auto px-4 pt-20 pb-12 text-center">
-                <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+            <div className="max-w-5xl mx-auto px-4 pt-20 pb-12 text-center ">
+                <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-linear-to-r from-white to-slate-400 bg-clip-text text-transparent">
                     Remove backgrounds <br /> in a heartbeat.
                 </h2>
                 <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
@@ -40,7 +40,7 @@ const Home = () => {
                 {/* Upload Container */}
                 <div className="relative group max-w-2xl mx-auto">
                     {/* Decorative glow behind the upload box */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                     
                     <div className="relative bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-2xl">
                         <Upload />
@@ -48,9 +48,9 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Subtle Footer or Accent */}
+            
             <footer className="fixed bottom-6 w-full text-center text-slate-500 text-sm">
-                Built ❤️ By Shubham 
+                Built ❤️ By shubham
             </footer>
         </main>
     );
